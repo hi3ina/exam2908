@@ -1,0 +1,15 @@
+F:\gb\Examples\ExampleSem\bin\Debug\net6.0\ExampleSem.exe
+F:\gb\Examples\ExampleSem\bin\Debug\net6.0\ExampleSem.deps.json
+F:\gb\Examples\ExampleSem\bin\Debug\net6.0\ExampleSem.runtimeconfig.json
+F:\gb\Examples\ExampleSem\bin\Debug\net6.0\ExampleSem.dll
+F:\gb\Examples\ExampleSem\bin\Debug\net6.0\ExampleSem.pdb
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.csproj.AssemblyReference.cache
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.GeneratedMSBuildEditorConfig.editorconfig
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.AssemblyInfoInputs.cache
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.AssemblyInfo.cs
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.csproj.CoreCompileInputs.cache
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.dll
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\refint\ExampleSem.dll
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.pdb
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ExampleSem.genruntimeconfig.cache
+F:\gb\Examples\ExampleSem\obj\Debug\net6.0\ref\ExampleSem.dll
