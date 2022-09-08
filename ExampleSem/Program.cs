@@ -38,19 +38,35 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-int a = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 4
-int b = Convert.ToInt32(Console.ReadLine());
-int c = Convert.ToInt32(Console.ReadLine());
-int max = a;
-{
-    if (max > b) max = max;
+// int a = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 4
+// int b = Convert.ToInt32(Console.ReadLine());
+// int c = Convert.ToInt32(Console.ReadLine());
+// int max = a;
+// {
+//     if (max > b) max = max;
 
-    else max = b;
-}
-{
-    if (max > c) max = max;
+//     else max = b;
+// }
+// {
+//     if (max > c) max = max;
 
-    else max = c;
+//     else max = c;
+// }
+// Console.Write("max=");
+// Console.WriteLine(max);
+
+// Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+// 4 -> да; -3 -> нет; 7 -> нет
+
+int a = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 6
+int result = a % 2;
+
+if (result == 0)
+{
+    Console.WriteLine("да");
 }
-Console.Write("max=");
-Console.WriteLine(max);
+else
+{
+    Console.WriteLine("нет");
+}
+
