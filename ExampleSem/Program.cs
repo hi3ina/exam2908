@@ -58,15 +58,23 @@
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 // 4 -> да; -3 -> нет; 7 -> нет
 
-int a = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 6
-int result = a % 2;
+// int a = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 6
+// int result = a % 2;
 
-if (result == 0)
-{
-    Console.WriteLine("да");
-}
-else
-{
-    Console.WriteLine("нет");
-}
+// if (result == 0)
+// {
+//     Console.WriteLine("да");
+// }
+// else
+// {
+//     Console.WriteLine("нет");
+// }
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N. 5 -> 2, 4; 8 -> 2, 4, 6, 8
+int N = Convert.ToInt32(Console.ReadLine());//ЗЯП 1 семенар  дз1 задача 8
+int i = 0;
 
+while (i < N)
+{
+    i += 2;
+    Console.Write(i);
+}
