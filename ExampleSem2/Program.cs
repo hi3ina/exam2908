@@ -16,5 +16,9 @@ if (lastNumber > firstNumber) // находим два последних чис
 }
 else
 {
-    Console.WriteLine(firstNumber);
+    Console.WriteLine($"Максимальное число равно {firstNumber} - верное решение");
 }
+// красивый ответ 1 способ сложить число и строчку Console.WriteLine("Максимальное число равно " + firstNumber);
+// второй способ интерполяция пеерменная внутри строчки Console.WriteLine($"Максимальное число равно {firstNumber} - верное решение");
+
+
