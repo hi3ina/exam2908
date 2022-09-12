@@ -69,37 +69,25 @@ string? input = Console.ReadLine();
 bool ValidateInput(string input)
 {
     bool isNumber = int.TryParse(input, out int number);
-
     if (!isNumber)
     {
         return false;
     }
-
     if (input.Length < 3)
     {
         return false;
     }
-
     return true;
 }
-
-
 char Get3Number(string number)
 {
     return number[2];
 }
-
 bool isValid = ValidateInput(input);
-
 if (!isValid)
 {
-    Console.WriteLine($"Третьей цифры числа нет");
+    Console.WriteLine($"Третьей цифры нет");
     return;
 }
-
 char result = Get3Number(input);
-
 Console.WriteLine($"Третья цифра числа - {result}");
-
-
-
