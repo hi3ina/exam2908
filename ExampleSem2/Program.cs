@@ -28,12 +28,34 @@
 // int a = random.Next(99, 1000);
 // int a = Convert.ToInt32(Console.ReadLine());
 
-Random random = new Random(); //вводим случайное трехзначное число]
-int random1 = random.Next(99, 1000);
+// Random random = new Random(); //вводим случайное трехзначное число]
+// int random1 = random.Next(99, 1000);
 
-Console.WriteLine(random1);
-int random2 = random1 % 100;
-int secontNumber = random2 / 10;
-Console.WriteLine(secontNumber);
+// Console.WriteLine(random1);
+// int random2 = random1 % 100;
+// int secontNumber = random2 / 10;
+// Console.WriteLine(secontNumber);
 
-return;
+// return;
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// int? НазваниеМетода(int number) //Здесь также может быть string это вам решать.
+// {
+// if(проверка на количество цифр)
+// {
+// return null;
+// }
+//     ... Какие-то действия
+//     return результат т.е. третья цифра.
+// }
+// var input = /(нужно еще в число преобразовать(либо можно этого не делать на ваше усмотрение))/Console.ReadLine();
+// var number/(это то что вернулось из метода)/ = НазваниеМетода(input);
+// if(number == null)
+// {
+// Console.WriteLine("третьей цифры нет");
+// }
+// else
+// {
+// Console.WriteLine(number);
+// }
+// 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6
+
