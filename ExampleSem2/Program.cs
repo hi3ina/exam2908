@@ -25,3 +25,15 @@
 //  удалить число - используем оператор деления и процент от деления
 //  метод int GetMaxNumber(int number) написание с заглавной с глагола место в коде - начало
 // GetMaxNumber - находит макс число, return - завершает код, то что ниже не будет выполняться
+// int a = random.Next(99, 1000);
+// int a = Convert.ToInt32(Console.ReadLine());
+
+Random random = new Random(); //вводим случайное трехзначное число]
+int random1 = random.Next(99, 1000);
+
+Console.WriteLine(random1);
+int random2 = random1 % 100;
+int secontNumber = random2 / 10;
+Console.WriteLine(secontNumber);
+
+return;
