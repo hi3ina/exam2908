@@ -27,7 +27,7 @@
 // GetMaxNumber - находит макс число, return - завершает код, то что ниже не будет выполняться
 // int a = random.Next(99, 1000);
 // int a = Convert.ToInt32(Console.ReadLine());
-
+//задача 10 д з 2
 // Random random = new Random(); //вводим случайное трехзначное число] //задача 10 д з 2
 // int random1 = random.Next(99, 1000);
 
@@ -37,63 +37,69 @@
 // Console.WriteLine(secontNumber);
 
 // return;
-// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-// int? НазваниеМетода(int number) //Здесь также может быть string это вам решать.
-// {
-// if(проверка на количество цифр)
-// {
-// return null;
-// }
-//     ... Какие-то действия
-//     return результат т.е. третья цифра.
-// }
-// var input = /(нужно еще в число преобразовать(либо можно этого не делать на ваше усмотрение))/Console.ReadLine();
-// var number/(это то что вернулось из метода)/ = НазваниеМетода(input);
-// if(number == null)
-// {
-// Console.WriteLine("третьей цифры нет");
-// }
-// else
-// {
-// Console.WriteLine(number);
-// }
-// 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6
-
-// Console.WriteLine("Введите число: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-
-// int number3 = a % 10;
-
-// if (a < 99)
-// {
-//     if (a > -99)
-//     {
-//         Console.WriteLine($"Третьей цифры в числе {a} нет");
-
-//     }
-//     else
-//     {
-//         Console.WriteLine($"Третья цифра числа {a} - {number3}");
-//     }
-// }
-// Console.WriteLine($"Третья цифра числа {a} - {number3}");
-// return;
-// Math.Round(num, 1)// число и один знак после запятой
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine()); // Аналогично предыдущим считали с консоли и послали в метод.if (number == 6)
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine()); // Аналогично предыдущим считали с консоли и послали в метод.if (number == 6)
 
-if (number == 6)
+// if (number == 6)
+// {
+//     Console.WriteLine("да");
+// }
+// else if (number == 7)
+// {
+//     Console.WriteLine("да");
+// }
+// else
+// {
+//     Console.WriteLine("нет");
+// }
+
+// Math.Round(num, 1)// число и один знак после запятой
+
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+
+// 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6
+
+Console.Write("Введите число: ");
+
+string? input = Console.ReadLine();
+
+bool ValidateInput(string input)
 {
-    Console.WriteLine("да");
+    bool isNumber = int.TryParse(input, out int number);
+
+    if (!isNumber)
+    {
+        return false;
+    }
+
+    if (input.Length < 3)
+    {
+        return false;
+    }
+
+    return true;
 }
-else if (number == 7)
+
+
+char Get3Number(string number)
 {
-    Console.WriteLine("да");
+    return number[2];
 }
-else
+
+bool isValid = ValidateInput(input);
+
+if (!isValid)
 {
-    Console.WriteLine("нет");
+    Console.WriteLine($"Третьей цифры числа нет");
+    return;
 }
+
+char result = Get3Number(input);
+
+Console.WriteLine($"Третья цифра числа - {result}");
+
+
+
