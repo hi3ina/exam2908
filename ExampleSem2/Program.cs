@@ -79,6 +79,21 @@
 // Console.WriteLine($"Третья цифра числа {a} - {number3}");
 // return;
 // Math.Round(num, 1)// число и один знак после запятой
-// Console.WriteLine("Введите число: ");
-// // string str = Console.ReadLine();
-// Console.WriteLine("Третья цифра числа -");
+
+// Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine()); // Аналогично предыдущим считали с консоли и послали в метод.if (number == 6)
+
+if (number == 6)
+{
+    Console.WriteLine("да");
+}
+else if (number == 7)
+{
+    Console.WriteLine("да");
+}
+else
+{
+    Console.WriteLine("нет");
+}
