@@ -38,69 +38,88 @@
 // Задача 19 Напишите программу, которая принимает на вход пятизначное число 
 // и проверяет, является ли оно палиндромом.
 
-// Console.WriteLine("Введите пятизначное число: ");
-// bool isNumberM = int.TryParse(Console.ReadLine(), out int M); //проверка на не число
+Console.Write("Введите пятизначное число: ");
+bool number = int.TryParse(Console.ReadLine(), out int M);
 
-// if (!isNumberM) ;
-// {
-//     Console.WriteLine("Не число");
-//     return;
-// }
+bool IsValidate(bool number) //проверка на не число
+{
+    if (number != true)
+    {
+        Console.WriteLine("Некорректное число");
+        return false;
+    }
+    if (M < -9999 || M > -99999)// проверяем что б число было пятизначным
+    {
+        int minus = M * -1; //избавляемся от минуса
+        return true;
+    }
+    if (M < 10000 || M > 99999) // проверяем что б число было пятизначным
+    {
+        Console.WriteLine("Некорректное число");
+        return false;
+    }
+    return true;
+}
+bool result = IsValidate(number);
+if (!result)
+{
+    return;
+}
+bool Palindrom(bool number)
+{
+    int m1 = M / 10000; // разбираем число на цифры
+    int m2 = M / 1000;
+    int m4 = M % 100;
+    int m5 = M % 10;
+    if (m1 == m5 && m2 == m4)
+    {
+        Console.WriteLine($"Число {M} является Палиндромом");
+        return true;
+    }
 
-// проверяем что б число было пятизначным
-// переводим число М в массив M() размера m
-// вводим пустой массив N размера m
-// присваиваем N[4] M[0]
-// присваиваем N[3] M[1]
-// присваиваем N[2] M[2]
-// присваиваем N[1] M[3]
-// присваиваем N[0] M[4]
-// сравниваем массив M и N
-// true Console.WriteLine($"Число {M} является Палиндромом");
-// else Console.WriteLine($"Число {M} не является Палиндромом");
+    Console.WriteLine($"Число {M} не является Палиндромом");
+    return false;
+}
+Palindrom(number);
 
 // Задача 21 Напишите программу, которая принимает на вход координаты двух точек
 //  и находит расстояние между ними в 3D пространстве.
 // формулу для нахождения расстояния между точками в пространстве
 // |AB| = сумма квадратов под корнем (Xb -Xa)кв+(Yb -Ya)кв+(Zb -Za)кв
-// Эта формула также справедлива, если точки А и В совпадают;
-// принадлежат одной из координатных осей или прямой, параллельной одной из координатных осей;
-// принадлежат одной из координатных плоскостей или плоскости, параллельной 
-// одной из координатных плоскостей.
 
-Console.WriteLine("Введите координаты точки a: Xa  ");
-bool isNumberXa = double.TryParse(Console.ReadLine(), out double Xa);
+// Console.WriteLine("Введите координаты точки a: Xa  ");
+// bool isNumberXa = double.TryParse(Console.ReadLine(), out double Xa);
 
-Console.WriteLine("Ya  ");
-bool isNumberYa = double.TryParse(Console.ReadLine(), out double Ya);
+// Console.WriteLine("Ya  ");
+// bool isNumberYa = double.TryParse(Console.ReadLine(), out double Ya);
 
-Console.WriteLine("Za  ");
-bool isNumberZa = double.TryParse(Console.ReadLine(), out double Za);
+// Console.WriteLine("Za  ");
+// bool isNumberZa = double.TryParse(Console.ReadLine(), out double Za);
 
-if (isNumberXa != true || isNumberYa != true || isNumberZa != true)
-{
-    Console.WriteLine("Числа введены не верно.");
-    return;
-}
+// if (isNumberXa != true || isNumberYa != true || isNumberZa != true)
+// {
+//     Console.WriteLine("Числа введены не верно.");
+//     return;
+// }
 
-Console.WriteLine("Введите координаты точки b: Xb  ");
-bool isNumberXb = double.TryParse(Console.ReadLine(), out double Xb);
+// Console.WriteLine("Введите координаты точки b: Xb  ");
+// bool isNumberXb = double.TryParse(Console.ReadLine(), out double Xb);
 
-Console.WriteLine("Yb  ");
-bool isNumberYb = double.TryParse(Console.ReadLine(), out double Yb);
+// Console.WriteLine("Yb  ");
+// bool isNumberYb = double.TryParse(Console.ReadLine(), out double Yb);
 
-Console.WriteLine("Zb  ");
-bool isNumberZb = double.TryParse(Console.ReadLine(), out double Zb);
+// Console.WriteLine("Zb  ");
+// bool isNumberZb = double.TryParse(Console.ReadLine(), out double Zb);
 
-if (isNumberXb != true || isNumberYb != true || isNumberZb != true)
-{
-    Console.WriteLine("Числа введены не верно.");
-    return;
-}
+// if (isNumberXb != true || isNumberYb != true || isNumberZb != true)
+// {
+//     Console.WriteLine("Числа введены не верно.");
+//     return;
+// }
 
-double Method(double Xa, double Ya, double Za, double Xb, double Yb, double Zb)
-{
-    double ab = Math.Sqrt((Math.Pow(Xb - Xa), 2) + (Math.Pow(Yb - Ya), 2) + (Math.Pow(Zb - Za), 2));
-    return ab;
-}
-Console.WriteLine($"Расстояние между точками a и b равно: {Method(Xa, Ya, Za, Xb, Yb, Zb)}");
+// double Method(double Xa, double Ya, double Za, double Xb, double Yb, double Zb)
+// {
+//     double ab = Math.Sqrt((Math.Pow(Xb - Xa), 2) + (Math.Pow(Yb - Ya), 2) + (Math.Pow(Zb - Za), 2));
+//     return ab;
+// }
+// Console.WriteLine($"Расстояние между точками a и b равно: {Method(Xa, Ya, Za, Xb, Yb, Zb)}");
