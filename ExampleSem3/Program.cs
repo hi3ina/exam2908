@@ -67,3 +67,40 @@
 // принадлежат одной из координатных осей или прямой, параллельной одной из координатных осей;
 // принадлежат одной из координатных плоскостей или плоскости, параллельной 
 // одной из координатных плоскостей.
+
+Console.WriteLine("Введите координаты точки a: Xa  ");
+bool isNumberXa = double.TryParse(Console.ReadLine(), out double Xa);
+
+Console.WriteLine("Ya  ");
+bool isNumberYa = double.TryParse(Console.ReadLine(), out double Ya);
+
+Console.WriteLine("Za  ");
+bool isNumberZa = double.TryParse(Console.ReadLine(), out double Za);
+
+if (isNumberXa != true || isNumberYa != true || isNumberZa != true)
+{
+    Console.WriteLine("Числа введены не верно.");
+    return;
+}
+
+Console.WriteLine("Введите координаты точки b: Xb  ");
+bool isNumberXb = double.TryParse(Console.ReadLine(), out double Xb);
+
+Console.WriteLine("Yb  ");
+bool isNumberYb = double.TryParse(Console.ReadLine(), out double Yb);
+
+Console.WriteLine("Zb  ");
+bool isNumberZb = double.TryParse(Console.ReadLine(), out double Zb);
+
+if (isNumberXb != true || isNumberYb != true || isNumberZb != true)
+{
+    Console.WriteLine("Числа введены не верно.");
+    return;
+}
+
+double Method(double Xa, double Ya, double Za, double Xb, double Yb, double Zb)
+{
+    double ab = Math.Sqrt((Math.Pow(Xb - Xa), 2) + (Math.Pow(Yb - Ya), 2) + (Math.Pow(Zb - Za), 2));
+    return ab;
+}
+Console.WriteLine($"Расстояние между точками a и b равно: {Method(Xa, Ya, Za, Xb, Yb, Zb)}");
