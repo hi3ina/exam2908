@@ -15,21 +15,21 @@
 // Задача 27: Напишите программу, которая принимает на вход число Задача 27
 //  и выдаёт сумму цифр в числе.
 
-Console.WriteLine("Введите число - размер массива: ");
-int size = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Введите число n: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-int[] array = new int[size]; //создаем массив size
-int[] sum = new int[num];// заполняем массив
-
-for (int i = 0; i < array.Length; i++)
-    array[i] = Convert.ToInt32(array[i].ToString());
-for (int i = 0; i < array.Length; i++)
-    sum = sum + array[i];
-
-Console.Write($"Сумма цифр числа {num} = {sum}");
+// Console.WriteLine("Введите число - размер массива: ");
+// int size = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите число: ");
+// int[] mass = new int[size];
+// int summ = 0;
+// string s = Console.ReadLine();
+// for (int i = 0; i < s.Length; i++)
+// {
+//     mass[i] = int.Parse(s[i].ToString());
+// }
+// for (int i = 0; i < mass.Length; i++)
+// {
+//     summ = mass[i] + summ;
+// }
+// Console.WriteLine($"Сумма цифр числа {s} = {summ}");
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов Задача 29
 // и выводит их на экран.
@@ -76,4 +76,3 @@ Console.Write($"Сумма цифр числа {num} = {sum}");
 //     }
 //     return array;
 // }
-
