@@ -4,12 +4,13 @@
 // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) 
 // и возводит число A в натуральную степень B.
 
-int a = Convert.ToInt32(Console.ReadLine());
-int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите степень числа x: ");
+int stepen = Convert.ToInt32(Console.ReadLine());
 
-result =
-
-Console.WriteLine(result);
+int result = Convert.ToInt32(Math.Pow(x, stepen));// Math.Pow(x, stepen);
+Console.Write($"число {x} в степени {stepen} = {result}"); // Console.Write($"{x} ^ {stepen} = {result}");
 
 // Задача 27: Напишите программу, которая принимает на вход число
 //  и выдаёт сумму цифр в числе.
