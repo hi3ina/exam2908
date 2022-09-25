@@ -46,63 +46,63 @@
 //Задача 50. Напишите программу, которая на вход принимает число и ищет в двумерном массиве, Задача 50. 
 //и возвращает индексы этого элемента или же указание, что такого элемента нет.
 //
-Console.WriteLine("Задайте число строк m= ");
-bool isNumberm = int.TryParse(Console.ReadLine(), out int m);
-if (!isNumberm || m <= 1)
-{
-    Console.WriteLine("Неверный ввод");
-    return;
-}
-Console.WriteLine("Задайте число столбцов n= ");
-bool isNumbern = int.TryParse(Console.ReadLine(), out int n);
-if (!isNumbern || n <= 1)
-{
-    Console.WriteLine("Неверный ввод");//задали размер проверили на число
-    return;
-}
-int[,] CreateRandomIntArray(int m, int n)// int массив
-{
-    int[,] array = new int[m, n];
-    Random random = new Random();
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = random.Next(9, 99);
-        }
-    }
-    return array;
-}
-void Print2DIntArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($" {array[i, j]}");
-        }
-        Console.WriteLine();
-    }
-}
-int[,] array2 = CreateRandomIntArray(m, n);
-Print2DIntArray(array2);//вывели массив на экран
+// Console.WriteLine("Задайте число строк m= ");
+// bool isNumberm = int.TryParse(Console.ReadLine(), out int m);
+// if (!isNumberm || m <= 1)
+// {
+//     Console.WriteLine("Неверный ввод");
+//     return;
+// }
+// Console.WriteLine("Задайте число столбцов n= ");
+// bool isNumbern = int.TryParse(Console.ReadLine(), out int n);
+// if (!isNumbern || n <= 1)
+// {
+//     Console.WriteLine("Неверный ввод");//задали размер проверили на число
+//     return;
+// }
+// int[,] CreateRandomIntArray(int m, int n)// int массив
+// {
+//     int[,] array = new int[m, n];
+//     Random random = new Random();
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = random.Next(9, 99);
+//         }
+//     }
+//     return array;
+// }
+// void Print2DIntArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int[,] array2 = CreateRandomIntArray(m, n);
+// Print2DIntArray(array2);//вывели массив на экран
 
-Console.WriteLine("Что ищем?");
+// Console.WriteLine("Что ищем?");
 
-int number = Convert.ToInt32(Console.ReadLine());
-string GuessArrayNumber(int[,] array, int number)
-{
-    string someString = "";
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] == number) someString = $"{i}, {j}"; ;
-        }
-    }
-    return someString;
-}
-Console.WriteLine(GuessArrayNumber(array2, number));
+// int number = Convert.ToInt32(Console.ReadLine());
+// string GuessArrayNumber(int[,] array, int number)
+// {
+//     string someString = "";
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (array[i, j] == number) someString = $"{i}, {j}"; ;
+//         }
+//     }
+//     return someString;
+// }
+// Console.WriteLine(GuessArrayNumber(array2, number));
 
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
