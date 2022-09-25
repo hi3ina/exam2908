@@ -46,79 +46,6 @@
 //Задача 50. Напишите программу, которая на вход принимает число и ищет в двумерном массиве, Задача 50. 
 //и возвращает индексы этого элемента или же указание, что такого элемента нет.
 //
-// Console.WriteLine("Задайте число строк m= ");
-// bool isNumberm = int.TryParse(Console.ReadLine(), out int m);
-// if (!isNumberm || m <= 1)
-// {
-//     Console.WriteLine("Неверный ввод");
-//     return;
-// }
-// Console.WriteLine("Задайте число столбцов n= ");
-// bool isNumbern = int.TryParse(Console.ReadLine(), out int n);
-// if (!isNumbern || n <= 1)
-// {
-//     Console.WriteLine("Неверный ввод");//задали размер проверили на число
-//     return;
-// }
-// int[,] CreateRandomIntArray(int m, int n)// int массив
-// {
-//     int[,] array = new int[m, n];
-//     Random random = new Random();
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             array[i, j] = random.Next(10, 10);
-//         }
-//     }
-//     return array;
-// }
-// void Print2DIntArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write($" {array[i, j]}");
-//         }
-//         Console.WriteLine();
-//     }
-// }
-// int[,] array2 = CreateRandomIntArray(m, n);
-// Print2DIntArray(array2);
-
-// Console.WriteLine("Что ищем?");
-// bool isNumber = int.TryParse(Console.ReadLine(), out int number);// проверка на целое число
-// if (!isNumber)
-// {
-//     Console.WriteLine("Это не число");
-//     return;
-// }
-// string GuessArrayNumber(int[,] array, int number)
-// {
-//     string someString = "";
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             if (array[i, j] == number)
-//             {
-//                 someString = $"Найдено {i}, {j}";
-//                 break;
-//             }
-//             else
-//             {
-//                 someString = "Не найдено";
-//             }
-//         }
-//     }
-//     return someString;
-// }
-// string cherstr2 = GuessArrayNumber(array2, number);
-// Console.WriteLine(cherstr2);
-//
-// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-//
 Console.WriteLine("Задайте число строк m= ");
 bool isNumberm = int.TryParse(Console.ReadLine(), out int m);
 if (!isNumberm || m <= 1)
@@ -141,7 +68,7 @@ int[,] CreateRandomIntArray(int m, int n)// int массив
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = random.Next(10);
+            array[i, j] = random.Next(9, 99);
         }
     }
     return array;
@@ -158,28 +85,89 @@ void Print2DIntArray(int[,] array)
     }
 }
 int[,] array2 = CreateRandomIntArray(m, n);
-Print2DIntArray(array2);
+Print2DIntArray(array2);//вывели массив на экран
 
-void PrintDoubleArray(double[] array)
+Console.WriteLine("Что ищем?");
+
+int number = Convert.ToInt32(Console.ReadLine());
+string GuessArrayNumber(int[,] array, int number)
 {
-    for (int i = 0; i < array.Length; i++)
+    string someString = "";
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"{array[i]} | ");
-    }
-}
-double[] NumberRow(int[,] array)
-{
-    double[] numberRow = new double[n];
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            numberRow[j] = numberRow[j] + array[i, j];
+            if (array[i, j] == number) someString = $"{i}, {j}"; ;
         }
-        numberRow[j] = numberRow[j] / array.GetLength(0);
     }
-    return numberRow;
+    return someString;
 }
-double[] numberRowDouble = NumberRow(array2);
-Console.WriteLine();
-PrintDoubleArray(numberRowDouble);
+Console.WriteLine(GuessArrayNumber(array2, number));
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+//
+// Console.WriteLine("Задайте число строк m= ");
+// bool isNumberm = int.TryParse(Console.ReadLine(), out int m);
+// if (!isNumberm || m <= 1)
+// {
+//     Console.WriteLine("Неверный ввод");
+//     return;
+// }
+// Console.WriteLine("Задайте число столбцов n= ");
+// bool isNumbern = int.TryParse(Console.ReadLine(), out int n);
+// if (!isNumbern || n <= 1)
+// {
+//     Console.WriteLine("Неверный ввод");//задали размер проверили на число
+//     return;
+// }
+// int[,] CreateRandomIntArray(int m, int n)// int массив
+// {
+//     int[,] array = new int[m, n];
+//     Random random = new Random();
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = random.Next(15);
+//         }
+//     }
+//     return array;
+// }
+// void Print2DIntArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($" {array[i, j]}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int[,] array2 = CreateRandomIntArray(m, n);
+// Print2DIntArray(array2);
+
+// void PrintDoubleArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} | ");
+//     }
+// }
+// double[] NumberRow(int[,] array)
+// {
+//     double[] numberRow = new double[n];
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             numberRow[j] = numberRow[j] + array[i, j];
+//         }
+//         numberRow[j] = numberRow[j] / array.GetLength(0); //Math.Round(num, 1)
+//     }
+//     return numberRow;
+// }
+// double[] numberRowDouble = NumberRow(array2);
+// Console.WriteLine();
+// PrintDoubleArray(numberRowDouble);
